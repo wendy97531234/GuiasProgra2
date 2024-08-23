@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaConexion.Modelos
+namespace DatosLayer
 {
-    internal class Customers
+    public class Customers
     {
         //// Campo privado (backing field)
         //private string companyName;
