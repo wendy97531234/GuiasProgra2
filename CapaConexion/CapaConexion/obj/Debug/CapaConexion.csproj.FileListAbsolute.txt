@@ -18,3 +18,6 @@ C:\Users\MINEDUCYT\Documents\ProgaII\GuiasProgra2\CapaConexion\CapaConexion\obj\
 C:\Users\MINEDUCYT\Documents\ProgaII\GuiasProgra2\CapaConexion\CapaConexion\obj\Debug\CapaConexion.exe
 C:\Users\MINEDUCYT\Documents\ProgaII\GuiasProgra2\CapaConexion\CapaConexion\obj\Debug\CapaConexion.pdb
 C:\Users\MINEDUCYT\Documents\ProgaII\GuiasProgra2\CapaConexion\CapaConexion\obj\Debug\CapaConexion.Form1.resources
+C:\Users\MINEDUCYT\Documents\ProgaII\GuiasProgra2\CapaConexion\CapaConexion\bin\Debug\DatosLayer.dll
+C:\Users\MINEDUCYT\Documents\ProgaII\GuiasProgra2\CapaConexion\CapaConexion\bin\Debug\DatosLayer.pdb
+C:\Users\MINEDUCYT\Documents\ProgaII\GuiasProgra2\CapaConexion\CapaConexion\obj\Debug\CapaCone.C1BD2A79.Up2Date
