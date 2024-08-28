@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{7E510473-907A-40DE-89FE-656EB5C00078}|DatosLayer\\DatosLayer.csproj|solutionrelative:datoslayer\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9D901C7-5BC0-40CD-AEE3-1300C7C353AD}|CapaConexion\\CapaConexion.csproj|C:\\Users\\MINEDUCYT\\Documents\\ProgaII\\GuiasProgra2\\CapaConexion\\capaconexion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9D901C7-5BC0-40CD-AEE3-1300C7C353AD}|CapaConexion\\CapaConexion.csproj|solutionrelative:capaconexion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9D901C7-5BC0-40CD-AEE3-1300C7C353AD}|CapaConexion\\CapaConexion.csproj|C:\\Users\\MINEDUCYT\\Documents\\ProgaII\\GuiasProgra2\\CapaConexion\\capaconexion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C9D901C7-5BC0-40CD-AEE3-1300C7C353AD}|CapaConexion\\CapaConexion.csproj|solutionrelative:capaconexion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D901C7-5BC0-40CD-AEE3-1300C7C353AD}|CapaConexion\\CapaConexion.csproj|C:\\Users\\MINEDUCYT\\Documents\\ProgaII\\GuiasProgra2\\CapaConexion\\capaconexion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D901C7-5BC0-40CD-AEE3-1300C7C353AD}|CapaConexion\\CapaConexion.csproj|solutionrelative:capaconexion\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9D901C7-5BC0-40CD-AEE3-1300C7C353AD}|CapaConexion\\CapaConexion.csproj|C:\\Users\\MINEDUCYT\\Documents\\ProgaII\\GuiasProgra2\\CapaConexion\\capaconexion\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -52,21 +52,22 @@
               "RelativeDocumentMoniker": "DatosLayer\\CustomerRepository.cs",
               "ToolTip": "C:\\Users\\MINEDUCYT\\Documents\\ProgaII\\GuiasProgra2\\CapaConexion\\DatosLayer\\CustomerRepository.cs*",
               "RelativeToolTip": "DatosLayer\\CustomerRepository.cs*",
-              "ViewState": "AQIAADMAAAAAAAAAAAAowE8AAAA9AAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAwGEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-23T03:21:04.455Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\MINEDUCYT\\Documents\\ProgaII\\GuiasProgra2\\CapaConexion\\CapaConexion\\Form1.cs",
               "RelativeDocumentMoniker": "CapaConexion\\Form1.cs",
               "ToolTip": "C:\\Users\\MINEDUCYT\\Documents\\ProgaII\\GuiasProgra2\\CapaConexion\\CapaConexion\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "CapaConexion\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T02:03:59.896Z"
+              "WhenOpened": "2024-08-23T02:03:59.896Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -82,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\MINEDUCYT\\Documents\\ProgaII\\GuiasProgra2\\CapaConexion\\CapaConexion\\Form1.cs",
               "RelativeDocumentMoniker": "CapaConexion\\Form1.cs",
@@ -90,7 +91,8 @@
               "RelativeToolTip": "CapaConexion\\Form1.cs",
               "ViewState": "AQIAACwAAAAAAAAAAAAUwC4AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T02:03:59.067Z"
+              "WhenOpened": "2024-08-23T02:03:59.067Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -102,7 +104,8 @@
               "RelativeToolTip": "CapaConexion\\Form1.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T02:03:57.409Z"
+              "WhenOpened": "2024-08-23T02:03:57.409Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -126,7 +129,8 @@
               "RelativeToolTip": "CapaConexion\\App.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-08-23T02:20:01.524Z"
+              "WhenOpened": "2024-08-23T02:20:01.524Z",
+              "EditorCaption": ""
             }
           ]
         }

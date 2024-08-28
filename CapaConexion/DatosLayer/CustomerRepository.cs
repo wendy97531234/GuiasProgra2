@@ -61,10 +61,11 @@ namespace DatosLayer
                 selectForID = selectForID + "      ,[Phone] " + "\n";
                 selectForID = selectForID + "      ,[Fax] " + "\n";
                 selectForID = selectForID + "  FROM [dbo].[Customers] " + "\n";
-                selectForID = selectForID + $"  Where CustomerID ='{id}'";
+                selectForID = selectForID + $"  Where CustomerID = @customerId";
 
                 using (SqlCommand comando = new SqlCommand(selectForID, conexion))
                 {
+                    comando.Parameters.AddWithValue("customerId", id);
                     var reader = comando.ExecuteReader();
                     Customers customers = null;
                     //validadmos 
@@ -93,6 +94,5 @@ namespace DatosLayer
             customers.Fax = reader["Fax"] == DBNull.Value ? "" : (String)reader["Fax"];
             return customers;
         }
-
     }
 }
