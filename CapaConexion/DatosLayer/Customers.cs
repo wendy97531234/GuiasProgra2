@@ -8,22 +8,8 @@ namespace DatosLayer
 {
     public class Customers
     {
-        //// Campo privado (backing field)
-        //private string companyName;
-
-        //// Propiedades con getter y setter
-        //public string CompanyName
-        //{
-        //    get { return companyName; }
-        //    set { companyName = value; }
-        //}
-
-        //public class Empresa
-        //{
-        //    // Propiedad automática
-        //    public string CompanyName { get; set; }
-        //}
-
+     
+        public string CustomerID {  get; set; }
         public String CompanyName { get; set; }
         public String ContactName { get; set; }
         public String ContactTitle { get; set; }
