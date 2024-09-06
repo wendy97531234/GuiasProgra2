@@ -147,11 +147,12 @@ namespace CapaConexion
 
             return nuevoCliente;
         }
-
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            int elimindas = customerRepository.EliminarCliente(tboxCustomerID.Text);
+            MessageBox.Show("Filas eliminadas = " + elimindas);
         }
+
     }
 }
 
