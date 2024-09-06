@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,14 +10,13 @@ namespace DatosLayer
 {
     public class CustomerRepository
     {
-
         public List<Customers> ObtenerTodos()
         {
             using (var conexion = DataBase.GetSqlConnection())
             {
                 String selectFrom = "";
-                selectFrom = selectFrom + "SELECT " + "\n";
-                selectFrom = selectFrom + "      [CompanyName] " + "\n";
+                selectFrom = selectFrom + "SELECT [CustomerID] " + "\n";
+                selectFrom = selectFrom + "      ,[CompanyName] " + "\n";
                 selectFrom = selectFrom + "      ,[ContactName] " + "\n";
                 selectFrom = selectFrom + "      ,[ContactTitle] " + "\n";
                 selectFrom = selectFrom + "      ,[Address] " + "\n";
@@ -66,6 +66,7 @@ namespace DatosLayer
                 using (SqlCommand comando = new SqlCommand(selectForID, conexion))
                 {
                     comando.Parameters.AddWithValue("customerId", id);
+
                     var reader = comando.ExecuteReader();
                     Customers customers = null;
                     //validadmos 
@@ -77,11 +78,11 @@ namespace DatosLayer
                 }
             }
         }
-
         public Customers LeerDelDataReader(SqlDataReader reader)
         {
 
             Customers customers = new Customers();
+            customers.CustomerID = reader["CustomerID"] == DBNull.Value ? " " : (String)reader["CustomerID"];
             customers.CompanyName = reader["CompanyName"] == DBNull.Value ? "" : (String)reader["CompanyName"];
             customers.ContactName = reader["ContactName"] == DBNull.Value ? "" : (String)reader["ContactName"];
             customers.ContactTitle = reader["ContactTitle"] == DBNull.Value ? "" : (String)reader["ContactTitle"];
@@ -94,12 +95,11 @@ namespace DatosLayer
             customers.Fax = reader["Fax"] == DBNull.Value ? "" : (String)reader["Fax"];
             return customers;
         }
-
+        //-------------
         public int InsertarCliente(Customers customer)
         {
             using (var conexion = DataBase.GetSqlConnection())
             {
-
                 String insertInto = "";
                 insertInto = insertInto + "INSERT INTO [dbo].[Customers] " + "\n";
                 insertInto = insertInto + "           ([CustomerID] " + "\n";
@@ -114,20 +114,47 @@ namespace DatosLayer
                 insertInto = insertInto + "           ,@ContactName " + "\n";
                 insertInto = insertInto + "           ,@ContactTitle " + "\n";
                 insertInto = insertInto + "           ,@Address " + "\n";
-                insertInto = insertInto + "           ,@Cty)";
+                insertInto = insertInto + "           ,@City)";
 
                 using (var comando = new SqlCommand(insertInto, conexion))
                 {
-                    comando.Parameters.AddWithValue("CustomerID", customer.CustomerID);
-                    comando.Parameters.AddWithValue("CompanyName", customer.CompanyName);
-                    comando.Parameters.AddWithValue("ContactName", customer.ContactName);
-                    comando.Parameters.AddWithValue("ContactTitle", customer.ContactName);
-                    comando.Parameters.AddWithValue("Address", customer.Address);
-                    comando.Parameters.AddWithValue("City", customer.City);
-                    var insertados = comando.ExecuteNonQuery();
+                    int insertados = parametrosCliente(customer, comando);
                     return insertados;
                 }
             }
+        }
+        public int ActualizarCliente(Customers customer)
+        {
+            using (var conexion = DataBase.GetSqlConnection())
+            {
+                String ActualizarCustomerPorID = "";
+                ActualizarCustomerPorID = ActualizarCustomerPorID + "UPDATE [dbo].[Customers] " + "\n";
+                ActualizarCustomerPorID = ActualizarCustomerPorID + "   SET [CustomerID] = @CustomerID " + "\n";
+                ActualizarCustomerPorID = ActualizarCustomerPorID + "      ,[CompanyName] = @CompanyName " + "\n";
+                ActualizarCustomerPorID = ActualizarCustomerPorID + "      ,[ContactName] = @ContactName " + "\n";
+                ActualizarCustomerPorID = ActualizarCustomerPorID + "      ,[ContactTitle] = @ContactTitle " + "\n";
+                ActualizarCustomerPorID = ActualizarCustomerPorID + "      ,[Address] = @Address " + "\n";
+                ActualizarCustomerPorID = ActualizarCustomerPorID + "      ,[City] = @City " + "\n";
+                ActualizarCustomerPorID = ActualizarCustomerPorID + " WHERE CustomerID= @CustomerID";
+                using (var comando = new SqlCommand(ActualizarCustomerPorID, conexion))
+                {
+
+                    int actualizados = parametrosCliente(customer, comando);
+                    return actualizados;
+                }
             }
         }
+
+        public int parametrosCliente(Customers customer, SqlCommand comando)
+        {
+            comando.Parameters.AddWithValue("CustomerID", customer.CustomerID);
+            comando.Parameters.AddWithValue("CompanyName", customer.CompanyName);
+            comando.Parameters.AddWithValue("ContactName", customer.ContactName);
+            comando.Parameters.AddWithValue("ContactTitle", customer.ContactName);
+            comando.Parameters.AddWithValue("Address", customer.Address);
+            comando.Parameters.AddWithValue("City", customer.City);
+            var insertados = comando.ExecuteNonQuery();
+            return insertados;
+        }
     }
+}

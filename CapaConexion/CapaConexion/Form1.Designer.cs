@@ -46,6 +46,7 @@
             this.tboxAddress = new System.Windows.Forms.TextBox();
             this.tboxCity = new System.Windows.Forms.TextBox();
             this.btnInsertar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,19 +194,30 @@
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(529, 308);
+            this.btnInsertar.Location = new System.Drawing.Point(518, 305);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(213, 27);
+            this.btnInsertar.Size = new System.Drawing.Size(111, 27);
             this.btnInsertar.TabIndex = 17;
             this.btnInsertar.Text = "Ingresar";
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(666, 305);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(111, 27);
+            this.btnModificar.TabIndex = 18;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.tboxCity);
             this.Controls.Add(this.tboxAddress);
@@ -254,6 +266,7 @@
         private System.Windows.Forms.TextBox tboxAddress;
         private System.Windows.Forms.TextBox tboxCity;
         private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
 

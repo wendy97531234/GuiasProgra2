@@ -47,13 +47,12 @@ namespace CapaConexion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
-                var cliente = customerRepository.ObtenerPorID(txtBuscar.Text);
-                if (cliente != null)
-                {
-                    txtBuscar.Text = cliente.CompanyName;
-                    MessageBox.Show(cliente.CompanyName);
-                } 
+
+            var cliente = customerRepository.ObtenerPorID(txtBuscar.Text);
+
+            {
+
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -126,6 +125,32 @@ namespace CapaConexion
         }
         private void label5_Click(object sender, EventArgs e)
         {
+        }
+        private void btModificar_Click(object sender, EventArgs e)
+        {
+            var actualizarCliente = ObtenerNuevoCliente();
+            int actualizadas = customerRepository.ActualizarCliente(actualizarCliente);
+            MessageBox.Show($"Filas actualizadas = {actualizadas}");
+        }
+
+        private Customers ObtenerNuevoCliente()
+        {
+
+            var nuevoCliente = new Customers
+            {
+                CustomerID = tboxCustomerID.Text,
+                CompanyName = tboxCompanyName.Text,
+                ContactTitle = tboxContactTitle.Text,
+                Address = tboxAddress.Text,
+                City = tboxCity.Text
+            };
+
+            return nuevoCliente;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
